@@ -21,6 +21,9 @@ def daterange(start_date, end_date):
 
 # Clean Data
 def clean_data(df):
+    """
+    Elimate unecessary columns
+    """
     df = df.drop(['payment_type', 'fare_amount', 'extra', 'mta_tax', 'tip_amount',
        'tolls_amount', 'improvement_surcharge'], axis = 1) # Delete non-necessary
     df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime,

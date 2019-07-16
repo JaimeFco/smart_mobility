@@ -14,6 +14,9 @@ The program writes as many txt as required in the current directory.
 """
 
 def convertToVMR(M, start=None, end=None):
+    """
+    Given a 3-D matrix M, save every 2D matrix in a txt file in VMR format
+    """
     if start == None:
         start = 0
     if end == None:
