@@ -3,7 +3,7 @@ import os
 import numpy as np
 import collections
 import sys
-from numpyToVisum.py import convertToVMR
+#from numpyToVisum.py import convertToVMR
 
 """
     Given three arguments, the program obtain the O/D matrices from the Yellow Taxi dataset.
@@ -44,8 +44,8 @@ def main():
     # Read the name of the output file
     outputFile = sys.argv[3]
     # interval
-    interval = sys.argv[4]
-    if 24 % interval == 0: # Not divisible
+    interval = int(sys.argv[4])
+    if 24 % interval != 0: # Not divisible
         exit()
 
     sdate = (int(sdate[0:4]), int(sdate[5:7]), int(sdate[8:]))
@@ -102,7 +102,7 @@ def main():
             dateStr = single_date.strftime("%Y-%m-%d")
             temp_data = data[ (data['tpep_pickup_datetime'] >= dateStr + " {0:02d}:00:00".format(i)) &
                    (data['tpep_pickup_datetime'] <= dateStr + " {0:02d}:59:59".format(i+interval-1)) ]
-            print("-> {0}: {1} - {2} hrs.".format(dateStr, i, temp_data.size))
+            print("-> {0}: {1} hrs. - {2}".format(dateStr, i, temp_data.size))
             for k in temp_data.index:
                 element = temp_data.PULocationID[k]
                 OD_matrix[element][element] += 1

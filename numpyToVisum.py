@@ -38,7 +38,10 @@ def convertToVMR(M, start=None, end=None):
         np.savetxt(fout, M[k], delimiter='    ', fmt = '%i')
         fout.close()
 
+def main():
+    ## Read nunpy array
+    M = np.load(sys.argv[1])
+    convertToVMR(M, int(sys.argv[2]), int(sys.argv[3]))
 
-## Read nunpy array
-M = np.load(sys.argv[1])
-convertToVMR(M, int(sys.argv[2]), int(sys.argv[3]))
+if __name__ == '__main__':
+    main()
