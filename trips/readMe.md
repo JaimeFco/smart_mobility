@@ -17,6 +17,8 @@ The configuration file has the following:
 - list with the name of the types of edges to be selected. Write "none" to let the program extract the ones that are allowed for the car type chosen
 
 Example of configfile.txt
+
+```
 data/taxi_zones.geojson
 data/map.net.xml
 data/dataFrame.csv
@@ -28,7 +30,7 @@ sumo/odTrips.xml
 140,141,236,237,262,263
 private
 none
-
+```
 
 After this program, you can do:
 duarouter -c duarcfg_file.trips2routes.duarcfg --additional-files additional.xml --ignore-errors --remove-loops t --repair.from t
