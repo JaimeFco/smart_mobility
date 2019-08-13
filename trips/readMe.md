@@ -39,3 +39,5 @@ then:
 $SUMO_HOME/tools/route/sort_routes.py od_route-file.odtrips.rou.xml
 
 sumo -c config_file.sumocfg --fcd-output fcd.txt --fcd-output.geo f --collision.action none --time-to-teleport 180 --step-length 3 --no-step-log t
+
+After the simulation, we can use the FCD (floating car data) to obtain the traffic counts per zone using fcd2counts.py (in construction).
