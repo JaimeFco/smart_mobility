@@ -6,15 +6,15 @@ python3 tripsGenerator.py configfile-path
 The configuration file must has the following data (in this order):
 - path to geojson
 - path to the network map (SUMO format)
-- path to the dataframe if you have it, or "none" if you want to download from internet.
-- offset to use in the coordinates in the geojson, two floats separeted by a comma ','
-- path to the TAz file to be output
+- path to the dataframe if you have it, or `none` if you want to download it from internet.
+- offset to use on the coordinates in the geojson, two floats separeted by a comma ',' (this can be seen in the SUMO network)
+- path to the TAZ file to be output
 - path to the trips file to be generated
-- start date in format yyy/mm/dd
-- end date in format yyy/mm/dd
-- a list, separated by commas, of the number of zones to be consider. If you want all, just write "all"
-- car type, use "private" by default
-- list with the name of the types of edges to be selected. Write "none" to let the program extract the ones that are allowed for the car type chosen
+- start date in the format yyyy/mm/dd
+- end date in format yyyy/mm/dd
+- a list, separated by commas, of the number of zones to be considered. If you want all of them, just write `all`
+- car type, use `private` by default
+- list with the name of the types of edges to be selected. Write `none` to let the program extract the ones that are allowed for the car type chosen
 
 Example of configfile.txt
 
