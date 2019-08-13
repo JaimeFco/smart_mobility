@@ -3,7 +3,7 @@ This programs extract trips from https://www1.nyc.gov/site/tlc/about/tlc-trip-re
 
 python3 tripsGenerator.py configfile-path
 
-The configuration file has the following:
+The configuration file must has the following data (in this order):
 - path to geojson
 - path to the network map (SUMO format)
 - path to the dataframe if you have it, or "none" if you want to download from internet.
