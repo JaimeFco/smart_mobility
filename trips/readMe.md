@@ -1,7 +1,7 @@
 # Trips generator for yellow cabs in NYC
 This programs extract trips from https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page.
 
-python3 functions.py configfilePath
+python3 tripsGenerator.py configfile-path
 
 The configuration file has the following:
 - path to geojson
